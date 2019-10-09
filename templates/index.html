@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}" media="screen">
+    <title>Twitter API</title>
+</head>
+
+<body>
+    <form action='/index' method="GET">
+        <div class="container">
+            <h1>API Twitter</h1>
+            <p>Digite usuario a buscar</p>
+            <hr>
+
+            <label for="email"><b>Usuario</b></label>
+            <input type="text" placeholder="Usuario" name="usuario" required>
+
+            <button type="submit" class="registerbtn">Search</button>
+        </div>
+        <div class="resultados">
+            <img src="{{foto}}" alt="">
+            <h1>Nombre: {{name}} </h1>
+            <p>User name: {{user}} </p>
+            <p>Cantidad de seguidores: {{ followers}} </p>
+        </div>
+    </form>
+
+</body>
+
+</html>
